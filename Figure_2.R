@@ -72,7 +72,7 @@ ggplot(top10_nc, aes(x=Group, y=log10(Level+1), col=Group))+
 
 
 ## Figure 2C - Heatmap DE miRNAs ----
-df <- read.delim("0_Metadata.tsv", check.names = F, row.names = 1)
+df <- read.delim("0_Metadata_metrics.tsv", check.names = F, row.names = 1)
 
 #to exclude: VSL-10M
 df <- filter(df, to_exclude_miRNA == "no")
@@ -191,7 +191,7 @@ classError(df$Group, cluster)
 
 ## Figure 2D - Scatterplot Sp. correlations ----
 
-pdata <- "0_Metadata.tsv"
+pdata <- "0_Metadata_metrics.tsv"
 
 cdata <- "0_filtcounts_miRNA_normalized.tsv"
 
