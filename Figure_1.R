@@ -7,7 +7,7 @@ library("RColorBrewer")
 library("gtsummary")
 
 #### Table 1 ----
-sdata <- read.delim("0_Metadata.tsv", check.names=F)
+sdata <- read.delim("0_Metadata_metrics.tsv", check.names=F)
 
 sdata$Group  <- factor(sdata$Group, levels=c("VSL", "LF"))
 
@@ -27,7 +27,7 @@ table1 %>%
 
 ### Figure 1 ----
 
-pdata <- "0_Metadata.tsv"
+pdata <- "0_Metadata_metrics.tsv"
 
 data <- read.delim(pdata, check.names = F)
 
@@ -116,7 +116,7 @@ ggplot(a, aes(x=Group, y=log10(Level+1), col=Group))+
 
 #### Figure 1F - Heatmap Exposure + Food intake ----
 
-pdata <- "0_Metadata.tsv"
+pdata <- "0_Metadata_metrics.tsv"
 
 data <- read.delim(pdata, check.names = F, row.names = 1)
 
